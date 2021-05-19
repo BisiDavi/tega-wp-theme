@@ -1,0 +1,193 @@
+.menuText,
+.menuText:before,
+.menuText:after {
+    background: white;
+    width: 30px;
+    height: 3px;
+}
+@keyframes menu-hover-top-over {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(8px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes menu-hover-bottom-over {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes menu-load-state-top {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(8px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes menu-load-state-bottom {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes menu-active-slide {
+    0% {
+        transform: translateX(-10px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes top-rot-in {
+    0% {
+        transform: rotate(0deg);
+        transform-origin: left;
+    }
+    100% {
+        transform: rotate(45deg);
+        transform-origin: left;
+    }
+}
+@keyframes bot-rot-in {
+    0% {
+        transform: rotate(0deg);
+        transform-origin: left;
+    }
+    100% {
+        transform: rotate(-45deg);
+        transform-origin: left;
+    }
+}
+.hamburger-menu {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+}
+.hamburger-menu a {
+    color: white;
+    text-decoration: none;
+    z-index: 10;
+}
+.menuButton {
+    padding: 10px;
+    height: 30px;
+    width: 30px;
+    display: block;
+    position: relative;
+}
+
+.menuText {
+    position: absolute;
+    top: 12px;
+}
+.menuText:before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    animation: menu-load-state-top 0.5s;
+}
+.menuText:after {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 0px;
+    animation: menu-load-state-bottom 0.5s;
+}
+.menuText b {
+    opacity: 0;
+    top: -13px;
+    left: 2px;
+    font-size: 0.55em;
+    line-height: 1em;
+    position: relative;
+    transition: all 0.15s 0.15s ease-in;
+    transition-delay: 0.5s;
+}
+.menuText:hover {
+    background: transparent;
+    transition: all 0.15s 0 ease-out;
+}
+.menuText:hover:before {
+    animation: menu-hover-top-over 0.5s 0.5s forwards;
+}
+.menuText:hover:after {
+    animation: menu-hover-bottom-over 0.5s 0.5s forwards;
+}
+.menuText:hover b {
+    opacity: 1;
+}
+
+.sub-menu {
+    font-size: 20px;
+    font-weight: 300;
+    list-style-type: none;
+    padding: 10px 20px;
+    width: 100%;
+    background: #001e8e;
+    background: linear-gradient(to bottom, #141415 0%, #c1bdc0 100%);
+    margin: 0;
+    position: fixed;
+    top: 40px;
+    display: none;
+    height: 100%;
+    left: 0;
+    transition: opacity 0.25s ease;
+    opacity: 0;
+}
+.sub-menu li {
+    line-height: 60px;
+    border-bottom: 1px solid white;
+}
+.sub-menu li:last-child {
+    border-bottom: none;
+}
+.active .menuText {
+    background: transparent;
+}
+.active .menuText:before {
+    top: -10px;
+    left: 5px;
+    animation: top-rot-in 0.5s forwards;
+}
+.active .menuText:after {
+    top: 10px;
+    left: 5px;
+    animation: bot-rot-in 0.5s forwards;
+}
+.active .menuText b {
+    opacity: 0;
+    transition: all 0.1s 0 ease-out;
+}
+.active .sub-menu {
+    opacity: 1;
+    transition: opacity 0.25s ease;
+    animation: menu-active-slide 0.25s;
+}
+li.closemenu {
+    height: 20vh;
+}
+
+@media (max-width: 360px) {
+    .sub-menu li {
+        line-height: 50px;
+        border-bottom: 1px solid white;
+    }
+}
