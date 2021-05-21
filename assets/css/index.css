@@ -26,7 +26,7 @@ header.col-12{
 }
 
 .site-row{
-    height:95%;
+    height:94%;
 }
 
 .swiper-slide {
@@ -441,4 +441,8 @@ div#thumbnail-slide .swiper-slide:nth-child(2) img {
 footer p.text-center {
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
+}
+#thumbnail-slide .swiper-slide:hover {
+    opacity: 1;
+    cursor: pointer;
 }

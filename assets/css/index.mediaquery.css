@@ -171,7 +171,11 @@
     }
     .content-text p {
         font-size: 16px;
-        padding: 5px;
+        padding: 5px 0;
+        margin-bottom: 0px;
+    }
+    .content-text ul {
+        margin-bottom: 0px;
     }
     .swiper-slide .content.row {
         align-items: flex-start;
@@ -226,7 +230,6 @@
         -webkit-font-smoothing: antialiased;
         transform-origin: 0% 0%;
         transform: translate(-100%, 0);
-
         transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
     }
 
@@ -237,6 +240,7 @@
 
     .content-text h3 {
         font-size: 20px;
+        margin-bottom: 0px;
     }
 
     .game-tags p {
@@ -250,19 +254,35 @@
 
 @media (max-width: 500px) {
     .content-profile img {
-        height: 220px;
+        height: 160px;
         width: 100%;
     }
     .profile.content.row {
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         height: 100vh;
+        padding:0px 15px;
         flex-direction: column;
+    }
+    .page-content .swiper-slide .home-page.content{
+        height: 100%;
+    }
+    .home-page .col-lg-6{
+        padding-top: 0px;
+    }
+    .game-tags {
+        margin: 5px 0px;
+    }
+    .game-tags p {
+        padding: 3px;
     }
     .content-profile {
         padding: unset;
-        height: 220px;
+        height: 160px;
+    }
+    .content-text {
+        margin: 0px 0px;
     }
     .page-content .control {
         display: none;
@@ -271,14 +291,19 @@
         background-color: blue;
     }
     .home-page.content.row h1 {
-        font-size: 40px;
+        font-size: 30px;
+        letter-spacing: 4px;
     }
     .content-video {
         height: 200px;
         margin: 20px 0;
     }
     .content-bio p {
-        font-size: 16px;
+        font-size: 15px;
+    }
+
+    .content-bio h1.title {
+        font-size: 24px;
     }
 
     h6.bio-description {
@@ -292,7 +317,15 @@
         padding: 0px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: start;
+    }
+}
+@media (max-width:385px){
+    .content-video {
+        height: 160px;
+    }
+    .content-text ul li {
+        font-size: 15px;
     }
 }
 @media (max-width: 360px) {
@@ -350,5 +383,31 @@
     }
     .tega-games{
         overflow: hidden;
+    }
+}
+
+@media (max-width:340px){
+    .content-bio h1 {
+        font-size: 16px;
+    }
+    .content-bio p {
+        font-size: 12px;
+    }
+    .home-page.content.row h1 {
+        font-size: 25px;
+    }
+    .home-page p {
+        margin-bottom: 10px;
+    }
+    h6.bio-description {
+        font-size: 14px;
+        margin: 10px 0px;
+    }
+    .content-text p {
+        font-size: 11px;
+        padding: 5px;
+    }
+    .content-video {
+        height: 140px;
     }
 }
