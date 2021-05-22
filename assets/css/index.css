@@ -17,6 +17,59 @@ body {
     background-repeat: repeat;
 }
 
+.container-fluid.tega-games {
+    display: flex;
+    flex-direction: column;
+}
+
+.home-page.content .col-12 {
+    margin-top: 60px;
+}
+
+nav li a{
+    position: relative;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1);
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1);
+    transition: all 200ms ease-in;
+    transform: scale(1);
+    background-color: transparent;
+}
+
+nav#nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 15px 0px;
+}
+
+nav#nav h1.site-title {
+    margin-bottom: 0px;
+}
+
+nav li a:hover{
+    text-decoration: none;
+    color: red;
+    box-shadow: 0px 0px 150px #000000;
+    z-index: 2;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.5);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.5);
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.5);
+    transition: all 200ms ease-in;
+    transform: scale(1.5);
+    background-color: transparent;
+}
+
+nav#nav {
+    padding: 15px 0px;
+}
+
 header.col-12{
     height:60px;
 }
@@ -25,9 +78,13 @@ header.col-12{
     display: none;
 }
 
-.site-row{
-    height:94%;
+main#page {
+    height: 88vh;
 }
+
+/* .site-row{
+    height:94%;
+} */
 
 .swiper-slide {
     text-align: center;
@@ -372,8 +429,8 @@ nav ul li {
 }
 
 .swiper-container {
-    margin-top: 50px;
-    height: 85%;
+    /* margin-top: 50px; */
+    height: 100%;
     width: 100%;
 }
 

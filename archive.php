@@ -10,18 +10,11 @@
 
 get_header();
 
-$description = get_the_archive_description();
-
 if (have_posts()) : ?>
 
-    <header class="page-header">
+    <div class="page-header col-12">
         <?php the_archive_title('<h1 class="page-title text-center">', '</h1>'); ?>
-        <?php if ($description) : ?>
-            <div class="archive-description">
-                <?php echo wp_kses_post(wpautop($description)); ?>
-            </div>
-        <?php endif; ?>
-    </header>
+    </div>
 
     <div class="category-grid">
         <?php while (have_posts()) :

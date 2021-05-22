@@ -12,5 +12,5 @@
     <?php else : ?>
         <?php the_title(sprintf('<h2 class="title"><a href="%s">', esc_url(get_permalink())), '</a></h2>'); ?>
     <?php endif; ?>
-    <?php the_post_thumbnail(); ?>
+    <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
 </div>

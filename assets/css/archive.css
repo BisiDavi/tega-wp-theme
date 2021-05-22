@@ -1,0 +1,35 @@
+.category-grid {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3,1fr);
+    padding: 0 15px;
+}
+
+.category-grid .post {
+    border: 5px solid lightsteelblue;
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 500px;
+}
+
+.post img {
+    height: 400px;
+    width: 100%;
+}
+
+.post .title a:hover {
+    color: red;
+}
+
+.post .title a {
+    font-size: 25px;
+    text-decoration: none;
+}
+
+.post .title a:hover {
+    font-size: 27px;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+}

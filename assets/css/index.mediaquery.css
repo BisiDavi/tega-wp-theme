@@ -381,8 +381,10 @@
     .to-top {
         display: none;
     }
-    .tega-games{
-        overflow: hidden;
+    nav li a:hover {
+        font-size: 19px;
+        transition-timing-function: ease-in-out;
+        transition-duration: 1s;
     }
 }
 

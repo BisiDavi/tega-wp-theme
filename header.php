@@ -25,37 +25,44 @@
     <?php wp_head(); ?>
 </head>
 
-<body class="container-fluid tega-games">
-    <div class="row site-row">
-        <header class="col-12 mx-auto">
-            <div id="navWrapper" class="col-12 nav-container">
-                <nav id="nav" role="navigation">
-                    <?php
-                    wp_nav_menu(array(
-                        'theme_location' => 'top-menu',
-                        'menu_class' => 'top-menu',
-                        'menu_id' => 'menu'
-                    ));
-                    ?>
-                </nav>
-                <div class="show-mobile">
-                    <h1>Chuks Tega.</h1>
-                    <div id="mobileMenu" class="hamburger-menu">
-                        <a href="#" id="menuButton" class="menuButton">
-                            <span class="menuText">
-                                <b>menu</b>
-                            </span>
-                        </a>
+<body>
+    <div class="container-fluid tega-games">
+        <div class="row site-row">
+            <header class="col-12 mx-auto">
+                <div id="navWrapper" class="col-12 nav-container">
+                    <nav id="nav" role="navigation">
+                        <h1 class="site-title">
+                            <a href="<?php echo esc_url(home_url('/')); ?>">
+                                <?php echo esc_html(get_bloginfo('name')); ?>
+                            </a>
+                        </h1>
                         <?php
                         wp_nav_menu(array(
-                            'theme_location' => 'mobile-menu',
-                            'menu_class' => 'sub-menu',
+                            'theme_location' => 'top-menu',
+                            'menu_class' => 'top-menu',
+                            'menu_id' => 'menu'
                         ));
                         ?>
+                    </nav>
+                    <div class="show-mobile">
+                        <h1 class="site-title">
+                            <a href="<?php echo esc_url(home_url('/')); ?>">
+                                <?php echo esc_html(get_bloginfo('name')); ?>
+                            </a>
+                        </h1>
+                        <div id="mobileMenu" class="hamburger-menu">
+                            <a href="#" id="menuButton" class="menuButton">
+                                <span class="menuText">
+                                    <b>menu</b>
+                                </span>
+                            </a>
+                            <?php
+                            wp_nav_menu(array(
+                                'theme_location' => 'mobile-menu',
+                                'menu_class' => 'sub-menu',
+                            ));
+                            ?>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </header>
-        <main id="page" class="col-12 page-content">
-            <div class="swiper-container mySwiper2">
-                <div class="swiper-wrapper">
+            </header>

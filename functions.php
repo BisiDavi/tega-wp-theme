@@ -24,6 +24,9 @@ function load_css()
     wp_register_style('menu', get_template_directory_uri() . '/assets/css/menu.css', array(), false, 'all');
     wp_enqueue_style('menu');
 
+    wp_register_style('archive', get_template_directory_uri() . '/assets/css/archive.css', array(), false, 'all');
+    wp_enqueue_style('archive');
+
     wp_register_style('swiper', get_template_directory_uri() . '/assets/css/swiper-bundle.min.css', array(), false, 'all');
     wp_enqueue_style('swiper');
 

@@ -6,7 +6,9 @@
  * @since Tega_Games 1.0
  */
 
-get_header();
+// get_header();
+
+get_header('home');
 
 // load the home page category
 $about_args = array(
@@ -34,9 +36,11 @@ if ($homepagePost->have_posts()) {
         get_template_part('template-parts/section/home', 'home');
     }
 }
+
 wp_reset_postdata();
 
 // load slider post loop
+
 $postArgs = array(
     'post_type' => 'post',
     'cat' => '-17, -18'
@@ -48,6 +52,7 @@ if ($sliderPost->have_posts()) {
         get_template_part('template-parts/content/content', 'content');
     }
 }
+
 wp_reset_postdata();
 
-get_footer();
+get_footer('home');
