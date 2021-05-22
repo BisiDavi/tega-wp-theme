@@ -27,9 +27,9 @@
 
 <body>
     <div class="container-fluid tega-games">
-        <div class="row site-row">
-            <header class="col-12 mx-auto">
-                <div id="navWrapper" class="col-12 nav-container">
+        <div class="row site-row px-0">
+            <header class="col-12 mx-auto px-0">
+                <div id="navWrapper" class="col-12 nav-container px-0">
                     <nav id="nav" role="navigation">
                         <h1 class="site-title">
                             <a href="<?php echo esc_url(home_url('/')); ?>">

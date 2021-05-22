@@ -18,15 +18,22 @@ body {
 }
 
 .container-fluid.tega-games {
-    display: flex;
-    flex-direction: column;
+    /* height: 100%; */
+    width: 100%;
+    position: relative;
 }
 
 .home-page.content .col-12 {
     margin-top: 60px;
 }
 
-nav li a{
+li.current-menu-item a {
+    color: red;
+    border: 2px solid white;
+    padding: 10px;
+}
+
+nav li a, h1.site-title{
     position: relative;
     -webkit-transition: all 200ms ease-in;
     -webkit-transform: scale(1);
@@ -37,41 +44,58 @@ nav li a{
     transition: all 200ms ease-in;
     transform: scale(1);
     background-color: transparent;
+    cursor: pointer;
 }
 
+.page-header {
+    margin:20px 0px;
+}
+.tega-page-content {
+    height: 100%;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.row.site-row.px-0 {
+    width: 100%;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: flex-start;
+    margin: auto;
+}
 nav#nav {
     display: flex;
     align-items: center;
+    padding: 0px;
     justify-content: space-around;
-    margin: 15px 0px;
+    margin: 0px;
+    background-color: #e7e7e7;
+    height: 100px;
 }
 
 nav#nav h1.site-title {
     margin-bottom: 0px;
 }
 
-nav li a:hover{
+nav li a:hover,
+h1.site-title a:hover,
+a:hover{
     text-decoration: none;
     color: red;
-    box-shadow: 0px 0px 150px #000000;
-    z-index: 2;
     -webkit-transition: all 200ms ease-in;
-    -webkit-transform: scale(1.5);
+    -webkit-transform: scale(1.2);
     -ms-transition: all 200ms ease-in;
-    -ms-transform: scale(1.5);
+    -ms-transform: scale(1.2);
     -moz-transition: all 200ms ease-in;
-    -moz-transform: scale(1.5);
+    -moz-transform: scale(1.2);
     transition: all 200ms ease-in;
-    transform: scale(1.5);
+    transform: scale(1.2);
     background-color: transparent;
 }
 
-nav#nav {
-    padding: 15px 0px;
-}
-
 header.col-12{
-    height:60px;
+    z-index: 1000;
+    height: 100px;
+    position: sticky;
 }
 
 .show-mobile {
@@ -131,6 +155,10 @@ main#page {
     opacity: 1;
 }
 
+.swiper-slide {
+    margin-top: 50px;
+}
+
 .swiper-slide img {
     display: block;
     width: 100%;
@@ -143,6 +171,7 @@ main#page {
 div#thumbnail-slide {
     margin: 0px;
     align-items: center;
+    bottom:20px;
 }
 
 .mySwiper #thumbnail-slide.thumbnail-slide .swiper-slide {
@@ -416,7 +445,7 @@ nav ul li {
 }
 
 .col-12.nav-container {
-    height: 60px;
+    height: 100px;
     margin: 0px;
     position: fixed;
     top: 0;
@@ -498,6 +527,12 @@ div#thumbnail-slide .swiper-slide:nth-child(2) img {
 footer p.text-center {
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
+}
+
+footer {
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
 }
 #thumbnail-slide .swiper-slide:hover {
     opacity: 1;
